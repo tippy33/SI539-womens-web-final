@@ -2,6 +2,22 @@ body > a {
   font-size: 90%;
 }
 
+body #skip-to-main-content {
+  position: absolute;
+  left: -200px;
+  top: -200px;
+}
+
+body #skip-to-main-content:focus{
+  position: static;
+  /* left: 10px;
+  top:10px; */
+}
+
+body audio {
+  position: static;
+}
+
 body{
 	padding: 10px;
 	background-color: #f5f3e7;
