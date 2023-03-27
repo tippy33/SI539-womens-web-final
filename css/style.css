@@ -10,8 +10,6 @@ body #skip-to-main-content {
 
 body #skip-to-main-content:focus{
   position: static;
-  /* left: 10px;
-  top:10px; */
 }
 
 body audio {
@@ -27,7 +25,6 @@ body{
 h1{
   font-size: 220%;
   font-family: "Rampart One", sans-serif;
-  /* color: #ffffff; */
   padding: 10px
 }
 
@@ -50,7 +47,6 @@ p{
   font-size: 100%;
   font-family: "Sawarabi Mincho",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-left: 10px;
-  /* padding-top: 10px; */
 }
 
 div ul li {
@@ -68,10 +64,6 @@ footer{
   padding-top:30px;
   padding-left:10px;
 }
-
-/* #index-img{
-  width: 50%;
-} */
 
 @keyframes title_wiggle{
   from{
@@ -99,11 +91,14 @@ body #index-h1{
 img{
   width: 100%;
   padding: 10px;
-  /* margin: 20px; */
   border-style: dotted;
   border-color: #9ad9db;
   border-width: 7px;
   border-radius: 30px;
+}
+
+img:hover{
+  box-shadow: 0 0 20px yellow;
 }
 
 div:nth-last-of-type(even) img{
@@ -145,7 +140,6 @@ header .fa-check {
 
 .container{
   display: grid;
-  /* grid-template-columns: 1fr 5fr 1fr; */
   row-gap: 30px;
 }
 
@@ -195,21 +189,16 @@ main dl div {
   padding: 8px;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 769px) {
   .container{
     display: grid;
     row-gap: 30px;
   }
 
   .history-children, .lit-children{
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    align-items: flex-start;
-  }
-
-  .history-children-img, .lit-children-img {
-    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
   }
 
   h3{
@@ -219,14 +208,17 @@ main dl div {
   p {
     font-size: 100%;
     font-family: "Sawarabi Mincho",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* padding-left: 10px; */
     padding-bottom: 10px;
   }
 
   main dl {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main dl div {
+    width: 45%;
   }
 
   nav ul li a{
@@ -236,5 +228,25 @@ main dl div {
   
   nav ul li a:hover{
     color: white;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container{
+    display: grid;
+    row-gap: 30px;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  main dl div {
+    width: 22%;
   }
 }
